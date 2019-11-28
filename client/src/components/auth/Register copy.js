@@ -11,14 +11,12 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         email: '',
         password: '',
         password2: '',
-        mobile: '',
         street: '',
         suburb: '',
         postcode: ''
-
     });
 
-    const { name, email, password, password2, mobile, street, suburb, postcode } = formData;
+    const { name, email, password, password2 } = formData;
 
     const onChange = e =>
         setFormData({...formData, [e.target.name]: e.target.value });
@@ -28,7 +26,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         if (password !== password2) {
             setAlert('Passwords do not match', 'danger');
         } else {
-            register({ name, email, password, mobile, street, suburb, postcode });
+            register({ name, email, password });
         }
     };
 
@@ -55,8 +53,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         value = { name }
         onChange = { e => onChange(e) }
         /> < /
-        div >
-        <
+        div > <
         div className = 'form-group' >
         <
         input type = 'email'
@@ -64,7 +61,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         name = 'email'
         value = { email }
         onChange = { e => onChange(e) }
-        />  <
+        /> <
         small className = 'form-text' >
         This site uses Gravatar so
         if you want a profile image, use a Gravatar email <
@@ -87,51 +84,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
         value = { password2 }
         onChange = { e => onChange(e) }
         /> < /
-        div >
-
-        <
-        div className = "form-group" >
-        <
-        input type = "text"
-        placeholder = "Confirm Mobile Number"
-        name = "mobile"
-        minLength = "10"
-        onChange = { e => onChange(e) }
-        /> < /
         div > <
-        div className = "form-group" >
-        <
-        input type = "text"
-        placeholder = "Street Name and Number"
-        name = "street"
-        minLength = "10"
-        onChange = { e => onChange(e) }
-        /> < /
-        div >
-
-        <
-        div className = "form-group" >
-        <
-        input type = "text"
-        placeholder = "Suburb"
-        name = "suburb"
-        minLength = "1"
-        onChange = { e => onChange(e) }
-        /> < /
-        div >
-        <
-        div className = "form-group" >
-        <
-        input type = "text"
-        placeholder = "Postcode"
-        name = "postcode"
-        minLength = "4"
-        onChange = { e => onChange(e) }
-        /> < /
-        div >
-
-
-        <
         input type = 'submit'
         className = 'btn btn-primary'
         value = 'Register' / >

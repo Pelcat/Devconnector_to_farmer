@@ -1,6 +1,6 @@
 {
-  "mongoURI": "",
-  "jwtSecret": "secret",
-  "githubClientId": "",
-  "githubSecret": ""
+    "mongoURI": "mongodb+srv://pelle_mumford:password1983@farmgatetrial-lrjav.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "secret",
+    "githubClientId": "",
+    "githubSecret": ""
 }
